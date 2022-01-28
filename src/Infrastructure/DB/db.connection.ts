@@ -1,4 +1,4 @@
-export default function(admin: any, serviceAccountKey: json){
+export default function(admin: any, serviceAccountKey: any){
 
     admin.initializeApp({credential: admin.credential.cert(serviceAccountKey)})
     const db = admin.firestore()

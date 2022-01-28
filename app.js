@@ -24,7 +24,7 @@ app.use((req, res, next) =>{
 // error-handling middleware
 app.use((err, req, res, next) =>{
 
-    console.log("I catch it " + err.stack)
+    console.log("LOGGIN" + err.stack)
     const { headers, statusCode, data } = httpError({statusCode: 500, errorMessage: "something broke, we are sorry, try later"})
     res.set(headers)
        .status(statusCode)
